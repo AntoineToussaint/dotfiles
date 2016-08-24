@@ -1,10 +1,10 @@
-execute pathogen#infect()
-
 set nocompatible               " be iMproved
 filetype off                   " required!
 set rtp+=~/tools/powerline/powerline/bindings/vim
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
+
 let g:vundle_default_git_proto='git'
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
@@ -12,12 +12,12 @@ let g:vundle_default_git_proto='git'
 let g:golang_root = '/usr/local/bin'
 let g:ycm_confirm_extra_conf = 0
 
+" Vundle
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
-
 
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-repeat'
@@ -26,6 +26,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'kien/ctrlp.vim'
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+
 Plugin 'plasticboy/vim-markdown'
 
 Plugin 'sjl/gundo.vim'
@@ -42,6 +44,14 @@ Plugin 'Gundo'
 Plugin 'reedes/vim-wordy'
 " Display powerline
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Swap buffers
+Plugin 'wesQ3/vim-windowswap'
+" Switch to C++ companion files
+Plugin 'derekwyatt/vim-fswitch'
+Plugin 'nathanaelkane/vim-indent-guides'
+
+Plugin 'rkulla/pydiction'
+"
 
 call vundle#end()
 "
@@ -182,7 +192,19 @@ imap ww <Esc>:wa<CR> " write all files and command mode
 
 " Fast Esc mode
 inoremap jj <Esc>
-inoremap kk <Esc>
+imap kk <Esc>
+
+" Python 'self'
+"inoremap sff self
+func Eatchar(pat)
+      let c = nr2char(getchar(0))
+      return (c =~ a:pat) ? '' : c
+endfunc
+iabbr <silent> sf self <Left><C-R>=Eatchar('\s')<CR>
+"inoreabbr  sff self
+iabbrev adn and
+
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
 
 " No arrows!
 map <up> <nop>

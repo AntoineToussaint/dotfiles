@@ -86,6 +86,7 @@ bindkey -M viins '^[OB' history-beginning-search-forward
 export WORKON_HOME=$HOME/.envs
 export PROJECT_HOME=$HOME/Development
 source /usr/local/bin/virtualenvwrapper.sh
+#source $(brew --prefix autoenv)/activate.sh
 
 # MISC SCRIPTS
 SCRIPT_DIR="$HOME/Development/scripts"
@@ -94,3 +95,4 @@ SCRIPT_DIR="$HOME/Development/scripts"
 IMGCAT="imgcat"
 alias imgcat="$SCRIPT_DIR/$IMGCAT/imgcat.sh"
 alias fuck="imgcat $SCRIPT_DIR/$IMGCAT/fuck.jpg"
+
