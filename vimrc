@@ -195,13 +195,6 @@ inoremap jj <Esc>
 imap kk <Esc>
 
 " Python 'self'
-"inoremap sff self
-func Eatchar(pat)
-      let c = nr2char(getchar(0))
-      return (c =~ a:pat) ? '' : c
-endfunc
-iabbr <silent> sf self <Left><C-R>=Eatchar('\s')<CR>
-"inoreabbr  sff self
 iabbrev adn and
 
 let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
