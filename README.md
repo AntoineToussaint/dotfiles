@@ -1,2 +1,1 @@
-# dotfiles
-WIP
+(docs/source/index.rst)
