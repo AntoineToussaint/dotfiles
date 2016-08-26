@@ -21,6 +21,7 @@ help:
 	@echo "  html       to make standalone HTML files"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
+	@echo "  gh-pages   to make HTML and upload to github Pages"
 	@echo "  pickle     to make pickle files"
 	@echo "  json       to make JSON files"
 	@echo "  htmlhelp   to make HTML files and a HTML help project"
@@ -227,13 +228,15 @@ dummy:
 
 .PHONY: gh-pages
 gh-pages:
-	git checkout gh-pages
-	rm -rf build ../_sources ../_static
-	git checkout master $(GH_PAGES_SOURCES)
-	git reset HEAD
-	make html
-	mv -fv build/html/* ../
-	touch ../.nojekyll
-	rm -rf $(GH_PAGES_SOURCES) build
-	git add -A
-	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
+	git checkout gh-pages>/dev/null
+	rm -rf build ../_sources ../_static>/dev/null
+	git checkout master $(GH_PAGES_SOURCES)>/dev/null
+	git reset HEAD>/dev/null
+	make html>/dev/null
+	mv -fv build/html/* ../>/dev/null
+	touch ../.nojekyll>/dev/null
+	rm -rf $(GH_PAGES_SOURCES) build>/dev/null
+	git add -A>/dev/null
+	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master>/dev/null
+	@echo
+	@echo "Build finished. Documentation pushed to GitHub."
