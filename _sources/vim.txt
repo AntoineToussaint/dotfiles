@@ -6,6 +6,14 @@ Vim configuration
 Vundle Packages
 ------------------
 
+
+Plugin 'kien/ctrlp.vim'
+----------------------------
+
+Search and open files. Use ``<C-p>``.
+
+https://github.com/ctrlpvim/ctrlp.vim
+
 Plugin 'wesQ3/vim-windowswap'
 -------------------------------
 
