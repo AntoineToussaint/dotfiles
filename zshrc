@@ -45,10 +45,6 @@ alias bd="popd > /dev/null"
 
 alias py="python"
 
-# GIT
-# Supplement git bundle
-alias gcan!="git commit -v -a --amend --no-edit"
-
 # utils
 source $HOME/.zsh/utils
 
@@ -75,10 +71,10 @@ bindkey -M viins '^[OB' history-beginning-search-forward
 # PYTHON
 
 # added by Anaconda3 4.1.1 installer
-# export PATH="/Users/antoine/anaconda/bin:$PATH"
+export PATH="/Users/antoine/anaconda/bin:$PATH"
 
 # added by Anaconda3 4.1.1 installer
-# export PATH="/Users/antoine/anaconda3/bin:$PATH"
+export PATH="/Users/antoine/anaconda3/bin:$PATH"
 #
 #
 
