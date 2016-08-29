@@ -1,9 +1,7 @@
-.. image:: https://readthedocs.org/projects/antoine-dotfiles/badge/?version=latest
-:target: http://antoine-dotfiles.readthedocs.io/en/latest/?badge=latest
-:alt: Documentation Status
-
 My configuration files
--------------------------
+======================
+
+|build-status| |docs|
 
 
 .. image:: https://raw.githubusercontent.com/caraphon/dotfiles/master/zsh_and_vim.png
