@@ -1,3 +1,7 @@
+.. image:: https://readthedocs.org/projects/antoine-dotfiles/badge/?version=latest
+:target: http://antoine-dotfiles.readthedocs.io/en/latest/?badge=latest
+:alt: Documentation Status
+
 My configuration files
 -------------------------
 
