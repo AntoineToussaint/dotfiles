@@ -1,7 +1,8 @@
 My configuration files
 
 ======================
-[![Documentation Status](https://readthedocs.org/projects/antoine-dotfiles/badge/?version=latest)](http://antoine-dotfiles.readthedocs.io/en/latest/?badge=latest)
+
+|docs|
 
 
 .. image:: https://raw.githubusercontent.com/caraphon/dotfiles/master/zsh_and_vim.png
@@ -12,3 +13,9 @@ Documentations:
 http://antoine-dotfiles.readthedocs.io/en/latest/
 
 https://caraphon.github.io/dotfiles/
+
+.. |docs| 
+.. image:: https://readthedocs.org/projects/antoine-dotfiles/badge/?version=latest
+:target: http://antoine-dotfiles.readthedocs.io/en/latest/?badge=latest
+:alt: Documentation Status
+    :scale: 100%
