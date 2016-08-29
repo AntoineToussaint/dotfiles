@@ -21,8 +21,8 @@ https://caraphon.github.io/dotfiles/
     :scale: 100%
     :target: https://travis-ci.org/rtfd/readthedocs.org
 
-.. |docs| image:: https://readthedocs.org/projects/docs/badge/?version=latest
+.. |docs| image:: https://readthedocs.org/antoine-dotfiles/docs/badge/?version=latest
     :alt: Documentation Status
     :scale: 100%
-    :target: https://docs.readthedocs.io/en/latest/?badge=latest
+    :target: http://antoine-dotfiles.readthedocs.io/en/latest/?badge=latest
 
