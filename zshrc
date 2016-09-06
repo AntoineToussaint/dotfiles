@@ -24,8 +24,6 @@ antigen apply
 # For z
 . `brew --prefix`/etc/profile.d/z.sh
 
-
-
 ### VI binding
 bindkey -v
 # Fast Esc mode

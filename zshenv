@@ -12,4 +12,3 @@ export PATH="/Users/antoine/anaconda3/bin:$PATH"
 export WORKON_HOME=$HOME/.envs
 export PROJECT_HOME=$HOME/Development
 /usr/local/bin/virtualenvwrapper.sh
-#source $(brew --prefix autoenv)/activate.sh
