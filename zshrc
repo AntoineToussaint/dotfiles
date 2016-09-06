@@ -68,21 +68,7 @@ bindkey -M viins '^[OA' history-beginning-search-backward
 bindkey -M viins '^[OB' history-beginning-search-forward
 
 
-# PYTHON
 
-# added by Anaconda3 4.1.1 installer
-export PATH="/Users/antoine/anaconda/bin:$PATH"
-
-# added by Anaconda3 4.1.1 installer
-export PATH="/Users/antoine/anaconda3/bin:$PATH"
-#
-#
-
-# Virtual env
-export WORKON_HOME=$HOME/.envs
-export PROJECT_HOME=$HOME/Development
-source /usr/local/bin/virtualenvwrapper.sh
-#source $(brew --prefix autoenv)/activate.sh
 
 # MISC SCRIPTS
 SCRIPT_DIR="$HOME/Development/scripts"

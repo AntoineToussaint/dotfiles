@@ -32,11 +32,15 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'plasticboy/vim-markdown'
 
 Plugin 'sjl/gundo.vim'
+"
 " Code completion
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+
 " Syntax checking
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
+
+
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'wincent/Command-T'
