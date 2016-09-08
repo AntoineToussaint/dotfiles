@@ -38,7 +38,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 
 " Syntax checking
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 
 Plugin 'altercation/vim-colors-solarized'
