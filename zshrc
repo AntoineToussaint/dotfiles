@@ -7,35 +7,31 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle pip
 antigen bundle command-not-found
-antigen bundle brew
-antigen bundle osx
 antigen bundle history
-antigen bundle docker
-antigen bundle docker-compose
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
 antigen theme robbyrussell
 
+
 # Tell antigen that you're done.
 antigen apply
 
-# For z
-. `brew --prefix`/etc/profile.d/z.sh
+.  /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 ### VI binding
 bindkey -v
 # Fast Esc mode
 bindkey jj vi-cmd-mode
 bindkey kk vi-cmd-mode
-export VISUAL=mvim
+
+export VISUAL=vim
 export EDITOR="$VISUAL"
 
-### powerline
-. /Library/Python/2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
-alias v="mvim"
+alias v="vim"
+alias gv="gvim"
 alias c="clear"
 
 alias cd="pushd > /dev/null"
@@ -46,13 +42,6 @@ alias py="python"
 # utils
 source $HOME/.zsh/utils
 
-# DOCKER Helpers
-
-latest_docker_image() {
-   IMAGE_ID=`docker images | sed -n 2p | awk '{print $3}'`
-   echo $IMAGE_ID
-}
-
 
 #export KEYTIMEOUT=1
 bindkey -M viins 'jj’ vi-cmd-mode
@@ -62,17 +51,5 @@ bindkey -M viins 'kk’ vi-cmd-mode
 bindkey -M viins '^R' history-incremental-pattern-search-backward
 bindkey -M viins '^F' history-incremental-pattern-search-forward
 
-bindkey -M viins '^[OA' history-beginning-search-backward
-bindkey -M viins '^[OB' history-beginning-search-forward
-
-
-
-
-# MISC SCRIPTS
-SCRIPT_DIR="$HOME/Development/scripts"
-
-# IMGCAT: display images in shell
-IMGCAT="imgcat"
-alias imgcat="$SCRIPT_DIR/$IMGCAT/imgcat.sh"
-alias fuck="imgcat $SCRIPT_DIR/$IMGCAT/fuck.jpg"
-
+bindkey -M viins "\e[A" history-beginning-search-backward
+bindkey -M viins "\e[B" history-beginning-search-backward

@@ -1,23 +1,26 @@
+execute pathogen#infect()
+
+
 set nocompatible               " be iMproved
 filetype off                   " required!
-set rtp+=~/tools/powerline/powerline/bindings/vim
+"set rtp+=~/tools/powerline/powerline/bindings/vim
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
 let g:vundle_default_git_proto='git'
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
+"let g:ycm_server_keep_logfiles = 1
+"let g:ycm_server_log_level = 'debug'
 let g:vundle_default_git_proto='git'
-let g:golang_root = '/usr/local/bin'
+"let g:golang_root = '/usr/local/bin'
 let g:ycm_confirm_extra_conf = 0
 
 " Vundle
 Plugin 'gmarik/Vundle.vim'
-Plugin 'ekalinin/Dockerfile.vim'
 
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-abolish'
 
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-repeat'
@@ -38,8 +41,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 
 " Syntax checking
-Plugin 'scrooloose/syntastic'
-
+" Plugin 'scrooloose/syntastic'
 
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-distinguished'
@@ -47,16 +49,20 @@ Plugin 'wincent/Command-T'
 Plugin 'vim-scripts/vcscommand.vim'
 Plugin 'Gundo'
 Plugin 'reedes/vim-wordy'
+"
 " Display powerline
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"
 " Swap buffers
 Plugin 'wesQ3/vim-windowswap'
+
 " Switch to C++ companion files
 Plugin 'derekwyatt/vim-fswitch'
+
+
 Plugin 'nathanaelkane/vim-indent-guides'
 
-Plugin 'rkulla/pydiction'
-"
+"Plugin 'rkulla/pydiction'
 
 call vundle#end()
 "
@@ -91,8 +97,8 @@ set linebreak               " don't wrap textin the middle of a word
 set autoindent              " always set autoindenting on
 set smartindent             " use smart indent if there is no indent file
 set tabstop=2              " <tab> inserts 4 spaces
-set shiftwidth=4            " an indent level is 4 spaces wide.
-set softtabstop=4           " <BS> over an autoindent deletes both spaces.
+set shiftwidth=2           " an indent level is 4 spaces wide.
+set softtabstop=2           " <BS> over an autoindent deletes both spaces.
 set expandtab               " Use spaces, not tabs, for autoindent/tab key.
 set shiftround              " rounds indent to a multiple of shiftwidth
 set formatoptions=tcroql    " Setting text and comment formatting to auto
@@ -136,9 +142,13 @@ map <C-space> :bn <CR>
 map <C-M-space> :bp <CR>
 
 " I bet 90% of vim users have the following two lines in their .vimrc...
+syntax on
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+"auto reload vimrc once changed
 " Don't create swapfiles
 " set noswapfile
 
@@ -166,23 +176,11 @@ let g:syntastic_aggregate_errors = 1
 " Set CtrlP to search by filename rather than path
 let g:ctrlp_by_filename = 0
 
-set guifont=Inconsolata\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set termencoding=utf-8
-
-if has("gui_running")
-    let s:uname = system("uname")
-    if s:uname == "Darwin\n"
-        set guifont=Inconsolata\ for\ Powerline:h15
-    endif
-else
-    set term=xterm-256color
-endif
-
-
 
 """ SHORTCUTS ""
 
@@ -196,7 +194,7 @@ imap ww <Esc>:wa<CR> " write all files and command mode
 "command -nargs=1 E execute('set wildmode=longest:full,full! silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <args>
 
 " Fast Esc mode
-inoremap jj <Esc>
+imap jj <Esc>
 imap kk <Esc>
 
 " Python 'self'
@@ -243,3 +241,8 @@ au BufEnter,BufNew *.py map <F8> :!python3 % <CR>
 
 " to do sudo after
 cmap w!! w !sudo tee % >/dev/null
+
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
