@@ -97,7 +97,7 @@ set linebreak               " don't wrap textin the middle of a word
 set autoindent              " always set autoindenting on
 set smartindent             " use smart indent if there is no indent file
 set tabstop=2              " <tab> inserts 4 spaces
-set shiftwidth=2           " an indent level is 4 spaces wide.
+set shiftwidth=2           " an indent level is 2 spaces wide.
 set softtabstop=2           " <BS> over an autoindent deletes both spaces.
 set expandtab               " Use spaces, not tabs, for autoindent/tab key.
 set shiftround              " rounds indent to a multiple of shiftwidth
@@ -109,7 +109,7 @@ set linespace=3             " The spacing between lines is a little roomier
 set autowrite               " Stop complaining about unsaved buffers
 set autowriteall            " I'm serious...
 set modeline                " Allow vim options to be embedded in files;
-set modelines=5             " they must be within the first or last 5 lines.
+set modelines=3             " they must be within the first or last 5 lines.
 
 """" Messages, Info, Status
 set ls=2                    " allways show status line

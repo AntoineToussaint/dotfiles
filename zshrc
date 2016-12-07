@@ -52,4 +52,4 @@ bindkey -M viins '^R' history-incremental-pattern-search-backward
 bindkey -M viins '^F' history-incremental-pattern-search-forward
 
 bindkey -M viins "\e[A" history-beginning-search-backward
-bindkey -M viins "\e[B" history-beginning-search-backward
+bindkey -M viins "\e[B" history-beginning-search-forward
