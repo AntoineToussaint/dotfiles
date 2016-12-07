@@ -4,6 +4,7 @@ ln  -sf dotfiles/zshenv ~/.zshenv
 ln  -sf dotfiles/zprofile ~/.zprofile
 ln  -sf dotfiles/zsh ~/.zsh
 ln  -sf dotfiles/vimrc ~/.vimrc
+ln  -sf dotfiles/config ~/.config
 sudo yum -y install zsh
 chsh -s /bin/zsh
 # ANTIGEN
@@ -21,3 +22,4 @@ sudo pip install git+git://github.com/Lokaltog/powerline
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+vim +PluginInstall +qall
