@@ -5,6 +5,7 @@ ln  -sf dotfiles/zprofile ~/.zprofile
 ln  -sf dotfiles/zsh ~/.zsh
 ln  -sf dotfiles/vimrc ~/.vimrc
 ln  -sf dotfiles/config ~/.config
+# Install ZSH
 sudo yum -y install zsh
 chsh -s /bin/zsh
 # ANTIGEN
