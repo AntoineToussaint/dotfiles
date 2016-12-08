@@ -1,10 +1,11 @@
 cd ~
-ln  -sf dotfiles/zshrc ~/.zshrc
-ln  -sf dotfiles/zshenv ~/.zshenv
-ln  -sf dotfiles/zprofile ~/.zprofile
-ln  -sf dotfiles/zsh ~/.zsh
-ln  -sf dotfiles/vimrc ~/.vimrc
-ln  -sf dotfiles/config ~/.config
+cp dotfiles/zshrc ~/.zshrc
+cp dotfiles/zshenv ~/.zshenv
+cp dotfiles/zprofile ~/.zprofile
+cp dotfiles/zsh ~/.zsh
+cp dotfiles/vimrc ~/.vimrc
+mkdir -p .config
+cp -r dotfiles/config/* ~/.config/
 # Install ZSH
 sudo yum -y install zsh
 chsh -s /bin/zsh
