@@ -8,4 +8,4 @@ export XDG_CONFIG_HOME=$HOME/.config
 # Virtual env
 export WORKON_HOME=$HOME/.envs
 export PROJECT_HOME=$HOME/Development
-#source /usr/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh

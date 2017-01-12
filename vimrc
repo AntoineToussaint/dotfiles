@@ -59,6 +59,8 @@ Plugin 'wesQ3/vim-windowswap'
 " Switch to C++ companion files
 Plugin 'derekwyatt/vim-fswitch'
 
+" Folding for JSON
+Plugin 'elzr/vim-json'
 
 Plugin 'nathanaelkane/vim-indent-guides'
 
@@ -76,6 +78,13 @@ set number                    " Display line numbers
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
+
+set guioptions-=m  "menu bar
+set guioptions-=T  "toolbar
+set guioptions-=r  "scrollbar
+
+set splitbelow
+set splitright
 
 " don't bell or blink
 set noerrorbells
