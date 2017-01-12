@@ -3,6 +3,7 @@ cp dotfiles/zshrc ~/.zshrc
 cp dotfiles/zshenv ~/.zshenv
 cp dotfiles/zprofile ~/.zprofile
 cp dotfiles/zsh ~/.zsh
+cp dotfiles/zsh/utils ~/.zsh/utils
 cp dotfiles/vimrc ~/.vimrc
 mkdir -p .config
 cp -r dotfiles/config/* ~/.config/
