@@ -3,7 +3,7 @@ execute pathogen#infect()
 
 set nocompatible               " be iMproved
 filetype off                   " required!
-"set rtp+=~/tools/powerline/powerline/bindings/vim
+set rtp+=~/tools/powerline/powerline/bindings/vim
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -17,6 +17,9 @@ let g:ycm_confirm_extra_conf = 0
 
 " Vundle
 Plugin 'gmarik/Vundle.vim'
+
+" Colorscheme
+Plugin 'flazz/vim-colorschemes'
 
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
@@ -51,7 +54,7 @@ Plugin 'Gundo'
 Plugin 'reedes/vim-wordy'
 "
 " Display powerline
-"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "
 " Swap buffers
 Plugin 'wesQ3/vim-windowswap'
@@ -154,8 +157,7 @@ map <C-M-space> :bp <CR>
 syntax on
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
+colorscheme molokai
 
 "auto reload vimrc once changed
 " Don't create swapfiles
@@ -185,11 +187,20 @@ let g:syntastic_aggregate_errors = 1
 " Set CtrlP to search by filename rather than path
 let g:ctrlp_by_filename = 0
 
+set guifont=Inconsolata\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
 set termencoding=utf-8
+
+if has("gui_running")
+   let s:uname = system("uname")
+   if s:uname == "Darwin\n"
+      set guifont=Inconsolata\ for\ Powerline:h15
+   endif
+endif
 
 """ SHORTCUTS ""
 

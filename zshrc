@@ -18,7 +18,8 @@ antigen theme robbyrussell
 # Tell antigen that you're done.
 antigen apply
 
-.  /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+# Powerline
+source /Users/antoinetoussaint/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 ### VI binding
 bindkey -v
@@ -31,16 +32,13 @@ export EDITOR="$VISUAL"
 
 
 alias v="vim"
-alias gv="gvim"
+alias gv="/Applications/MacVim.app/Contents/bin/mvim"
 alias c="clear"
 
 alias cd="pushd > /dev/null"
 alias bd="popd > /dev/null"
 
 alias py="python"
-
-# utils
-source $HOME/.zsh/utils
 
 
 #export KEYTIMEOUT=1
